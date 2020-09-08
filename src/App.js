@@ -46,7 +46,7 @@ const App = () => {
 
   useEffect( () => {
     /* Search from OMDB's API */
-    fetch(`http://www.omdbapi.com/?apikey=df435e4a&s=${search}`)
+    fetch(`https://www.omdbapi.com/?apikey=df435e4a&s=${search}`)
       .then( res => res.json() )
       .then( json => (json.hasOwnProperty("Error")) ? setMovies([]) : setMovies(json.Search) );
     localStorage.setItem('nominations', JSON.stringify(nominations));
